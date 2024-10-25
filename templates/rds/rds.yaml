@@ -1,9 +1,9 @@
 apiVersion: scaffolder.backstage.io/v1beta3
 kind: Template
 metadata:
-  name: create-ec2-instance
-  title: Create an EC2 Instance
-  description: Create an Instance to deploy your application
+  name: Create RDS database
+  title: Create RDS database
+  description: Create an RDS instance for your application
   tags: ['recommended']
 spec:
   owner: guests
