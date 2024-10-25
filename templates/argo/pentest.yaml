@@ -42,6 +42,7 @@ spec:
     - title: Provide information about the new component
       required:
         - owner
+        - system
       properties:
         owner:
           title: Owner
@@ -52,6 +53,14 @@ spec:
               kind:
                 - Group
                 - User
+        system:
+          title: System
+          type: string
+          ui:field: EntityPicker
+          ui:options:
+            catalogFilter:
+              kind:
+                - System
     - title: Provide information about the ArgoCD deployment
       required:
         - imageRepository
@@ -76,7 +85,7 @@ spec:
         namespace:
           title: Namespace
           type: string
-          default: app-team-name
+          default: system:janus-idp
           description: The namespace for deploying resources
         hostUrl:
           title: Host URL
@@ -97,6 +106,7 @@ spec:
           orgName: ${{ parameters.orgName }}
           repoName: ${{ parameters.repoName }}-gitops
           owner: ${{ parameters.owner }}
+          system: ${{ parameters.system }}
           applicationType: gitops
           description: Contains the ArgoCD manifests for ${{ parameters.repoName }}
           namespace: ${{ parameters.namespace }}
@@ -115,6 +125,7 @@ spec:
           orgName: ${{ parameters.orgName }}
           repoName: ${{ parameters.repoName }}
           owner: ${{ parameters.owner }}
+          system: ${{ parameters.system }}
           applicationType: gitops
           description: Contains the ArgoCD manifests for ${{ parameters.repoName }}
           namespace: ${{ parameters.namespace }}
