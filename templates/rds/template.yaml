@@ -1,7 +1,7 @@
 apiVersion: scaffolder.backstage.io/v1beta3
 kind: Template
 metadata:
-  name: Create RDS database
+  name: create-rds
   title: Create RDS database
   description: Create an RDS instance for your application
   tags: ['recommended']
