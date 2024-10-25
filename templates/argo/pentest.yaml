@@ -96,7 +96,7 @@ spec:
       name: Generating the Catalog Info Component
       action: fetch:template
       input:
-        url: ../skeletons/catalog-info/
+        url: ../../skeletons/catalog-info/
         values:
           # Gitops specific values
           entityKind: Resource
@@ -120,7 +120,7 @@ spec:
       name: Generating the Manifests Component
       action: fetch:template
       input:
-        url: ../skeletons/manifests/
+        url: ../../skeletons/manifests/
         values:
           orgName: ${{ parameters.orgName }}
           repoName: ${{ parameters.repoName }}
